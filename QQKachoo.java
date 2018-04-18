@@ -4,19 +4,38 @@
 // 2018-04-19r
 
 /*****************************************************
- * interface Deque
+ * class QQKachoo
  * Double-Ended Queue
  ******************************************************/
 
-public interface Deque<Card> {
+public class QQKachoo<Card> implements Deque<Card> {
 
-    public int size();
+    // ~~~ INSTANCE VARIABLES ~~~
+
+    // ~~~~~ CONSTRUCTOR(S) ~~~~~
     
+    // ~~~~~~~~~ METHODS ~~~~~~~~
+
+    // *** ACCESSORS ***
+    
+    // Returns the number of elements in this deque.
+    public int size();
+
     public Card getFirst();
     public Card getLast();
     public Card element();
+
+
+    // *** MEANS OF INSERTION ***
     
+    /* Inserts the specified element into the queue represented by this deque
+       (in other words, at the tail of this deque) if it is possible to do so 
+       immediately without violating capacity restrictions, returning true upon 
+       success and throwing an IllegalStateException if no space is currently 
+       available. */
     public boolean add( Card e );
+
+    
     public void addFirst( Card e );
     public void addLast( Card e );
     
