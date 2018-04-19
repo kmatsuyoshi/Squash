@@ -2,7 +2,7 @@
 Roster: Kendrick Liang, Kayli Matsuyoshi, Lynne Wang
 
 ### TO DO LIST:
-- [x] Draft a list of prioritized deque methods to implement
+- [ ] Draft a list of prioritized deque methods to implement
 - [ ] Write a local Deque interface
 - [ ] Design an implementation (QQKachoo) of the Deque interface w/ chosen methods
     - Chosen methods:
