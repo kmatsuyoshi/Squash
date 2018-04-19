@@ -21,7 +21,10 @@ public class QQKachoo<Card> implements Deque<Card> {
     }
     
     // ~~~~~~~~~ METHODS ~~~~~~~~
-    
+
+    public boolean isEmpty(){
+	return _size == 0;
+    }
     // *** MEANS OF INSERTION ***
     
     /* Inserts the specified element at the front of this deque if it is 
@@ -29,13 +32,13 @@ public class QQKachoo<Card> implements Deque<Card> {
        throwing an IllegalStateException if no space is currently available. */
     // TO DO: Throw exception
     public void addFirst( Card e ) {
-	LLNode<T> frontNode = new LLNode( e, null );
+	DLLNode<Card> frontNode = new LLNode( e, null );
         if ( _size == 0 ) {
             _front = frontNode;
             _end = frontNode;
         }
         else {
-            LLNode<T> tempNode = _front;
+            DLLNode<Card> tempNode = _front;
             tempNode.setPrev( frontNode );
 	    frontNode.setNext( tempNode );
             _front = frontNode;
@@ -48,13 +51,13 @@ public class QQKachoo<Card> implements Deque<Card> {
        throwing an IllegalStateException if no space is currently available. */
     // TO DO: Throw exception
     public void addLast( Card e ) {
-	LLNode<T> endNode = new LLNode( e, null );
+	DLLNode<Card> endNode = new LLNode( e, null );
         if ( _size == 0 ) {
             _front = endNode;
             _end = endNode;
         }
         else {
-            LLNode<T> tempNode = _end;
+            DLLNode<Card> tempNode = _end;
             tempNode.setNext( endNode );
             _end = endNode;
         }
@@ -62,11 +65,27 @@ public class QQKachoo<Card> implements Deque<Card> {
     }
     
     // *** Peekers ***
-    public Card peekFirst();
-    public Card peekLast();
+    public Card peekFirst(){
+	return _front.getValue();
+    }
+    public Card peekLast(){
+	return _end.getValue();
+    }
 
     // *** Pollers ***
-    public Card pollFirst();
-    public Card pollLast();   
+    public Card pollFirst(){
+	if (isEmpty())
+	    return null;
+	DLLNode<Card> tempNode = _front;
+	_front = _front.getNext();
+	return tempNode.getValue();
+    }
+    public Card pollLast(){
+	if (isEmpty())
+	    return null;
+	DLLNode<Card> tempNode = _end;
+	_end =_end.getPrev();
+	return tempNode.getValue();
+    }
     
 }

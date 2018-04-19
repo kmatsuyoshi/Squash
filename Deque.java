@@ -14,10 +14,10 @@ public interface Deque<Card> {
     public boolean isEmpty();
 
     //Inserts the specified element at the front of this deque
-    public void addFirst( Card );
+    public void addFirst( Card e);
 
     //Inserts the specified element at the end of this deque
-    public void addLast( Card );
+    public void addLast( Card e);
 
     //Retrieves and removes the first element of this deque
     //returns null if this deque is empty
