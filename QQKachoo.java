@@ -32,7 +32,7 @@ public class QQKachoo<Card> implements Deque<Card> {
        throwing an IllegalStateException if no space is currently available. */
     // TO DO: Throw exception
     public void addFirst( Card e ) {
-	DLLNode<Card> frontNode = new LLNode( e, null );
+	DLLNode<Card> frontNode = new DLLNode( e, null, _front );
         if ( _size == 0 ) {
             _front = frontNode;
             _end = frontNode;
@@ -51,7 +51,7 @@ public class QQKachoo<Card> implements Deque<Card> {
        throwing an IllegalStateException if no space is currently available. */
     // TO DO: Throw exception
     public void addLast( Card e ) {
-	DLLNode<Card> endNode = new LLNode( e, null );
+	DLLNode<Card> endNode = new DLLNode( e, _end ,null );
         if ( _size == 0 ) {
             _front = endNode;
             _end = endNode;

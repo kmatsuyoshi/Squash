@@ -20,7 +20,7 @@ public class DLLNode<Card>
 
 
   //--------------v  ACCESSORS  v--------------
-  public Card getCargo() { return _cargo; }
+    public Card getValue() { return _cargo; }
 
   public DLLNode<Card> getNext() { return _nextNode; }
 
@@ -29,9 +29,9 @@ public class DLLNode<Card>
 
 
   //--------------v  MUTATORS  v--------------
-  public Card setCargo( String newCargo )
+  public Card setValue( Card newCargo )
   {
-    String foo = getCargo();
+    Card foo = getValue();
     _cargo = newCargo;
     return foo;
   }
