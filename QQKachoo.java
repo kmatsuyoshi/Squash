@@ -88,4 +88,15 @@ public class QQKachoo<Card> implements Deque<Card> {
 	return tempNode.getValue();
     }
     
+    public String toString() {
+	String retStr = "front->";
+	DLLNode<Card> temp = _front; //init tr
+	while( temp != null ) {
+	    retStr += (String) temp.getValue() + "->";
+	    temp = temp.getNext();
+	}
+	retStr += "NULL";
+	return retStr;
+    }//end toString()
+    
 }
