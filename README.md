@@ -7,8 +7,8 @@ Roster: Kendrick Liang, Kayli Matsuyoshi, Lynne Wang
 - [ ] Design an implementation (QQKachoo) of the Deque interface w/ chosen methods
     - Chosen methods:
         - boolean isEmpty();
-        - void addFirst( Card );
-        - void addLast( Card );
+        - void addFirst( Card );
+        - void addLast( Card );
         - Card pollFirst();
         - Card pollLast();
         - Card peekFirst();
