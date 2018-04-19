@@ -4,14 +4,14 @@
  * Stores a String as cargo.
  *****************************************************/
 
-public class DLLNode
+public class DLLNode<Card>
 {
-  private String _cargo;    //cargo may only be of type String
-  private DLLNode _nextNode, _prevNode; //pointers to next, prev DLLNodes
+  private Card _cargo;    //cargo may only be of type String
+  private DLLNode<Card> _nextNode, _prevNode; //pointers to next, prev DLLNodes
 
 
   // constructor -- initializes instance vars
-  public DLLNode( String value, DLLNode prev, DLLNode next )
+  public DLLNode( Card value, DLLNode<Card> prev, DLLNode<Card> next )
   {
     _cargo = value;
     _nextNode = next;
@@ -20,32 +20,32 @@ public class DLLNode
 
 
   //--------------v  ACCESSORS  v--------------
-  public String getCargo() { return _cargo; }
+  public Card getCargo() { return _cargo; }
 
-  public DLLNode getNext() { return _nextNode; }
+  public DLLNode<Card> getNext() { return _nextNode; }
 
-  public DLLNode getPrev() { return _prevNode; }
+  public DLLNode<Card> getPrev() { return _prevNode; }
   //--------------^  ACCESSORS  ^--------------
 
 
   //--------------v  MUTATORS  v--------------
-  public String setCargo( String newCargo )
+  public Card setCargo( String newCargo )
   {
     String foo = getCargo();
     _cargo = newCargo;
     return foo;
   }
 
-  public DLLNode setNext( DLLNode newNext )
+  public DLLNode<Card> setNext( DLLNode<Card> newNext )
   {
-    DLLNode foo = getNext();
+    DLLNode<Card>foo = getNext();
     _nextNode = newNext;
     return foo;
   }
 
-  public DLLNode setPrev( DLLNode newPrev )
+  public DLLNode<Card> setPrev( DLLNode<Card> newPrev )
   {
-    DLLNode foo = getPrev();
+    DLLNode<Card> foo = getPrev();
     _prevNode = newPrev;
     return foo;
   }
@@ -63,7 +63,7 @@ public class DLLNode
 
     /*********************
      //Create a node
-	DLLNode first = new DLLNode( "cat", null );
+	DLLNode<Card>first = new DLLNode( "cat", null );
 
 	//Create a new node after the first
 	first.setNext( new DLLNode( "dog", null ) );
@@ -71,7 +71,7 @@ public class DLLNode
 	//Create a third node after the second
 	first.getNext().setNext( new DLLNode( "cow", null ) );
 
-	DLLNode temp = first; 
+	DLLNode<Card> temp = first; 
 	while( temp != null ) {
 	    System.out.println( temp );
 	    temp = temp.getNext();
