@@ -1,7 +1,7 @@
 // Team Squash ( Kendrick Liang, Kayli Matsuyoshi, Lynne Wang )
 // APCS2 pd1
-// HW37 --
-// 2018-04-19r
+// L #02: All Hands on Deque!
+// 2018-04-19
 
 /*****************************************************
  * interface Deque
@@ -10,42 +10,29 @@
 
 public interface Deque<Card> {
 
-    public int size();
-    
-    public Card getFirst();
-    public Card getLast();
-    public Card element();
-    
-    public boolean add( Card e );
-    public void addFirst( Card e );
-    public void addLast( Card e );
-    
-    public boolean contains( Object o );
- 
-    public Iterator<Card> descendingIterator();
-    public Iterator<Card> iterator();
-    
-    public boolean offer( Card e );
-    public boolean offerFirst( Card e );
-    public boolean offerLast( Card e );
-    
-    public Card peek();
-    public Card peekFirst();
-    public Card peekLast();
-    
-    public Card poll();
+    //returns true if empty, false if not
+    public boolean isEmpty();
+
+    //Inserts the specified element at the front of this deque
+    public void addFirst( Card );
+
+    //Inserts the specified element at the end of this deque
+    public void addLast( Card );
+
+    //Retrieves and removes the first element of this deque
+    //returns null if this deque is empty
     public Card pollFirst();
+
+    //Retrieves and removes the last element of this deque
+    //returns null if this deque is empty
     public Card pollLast();
-    
-    public Card pop();
-    public void push( Card e );
-    
-    public Card remove();
-    public boolean remove( Object o );
-    public Card removeFirst();
-    public boolean removeFirstOccurrence( Object o );
-    public Card removeLast();
-    public boolean removeLastOccurence();
-    
+
+    //Retrieves, but does not remove, the first element of this deque
+    //returns null if this deque is empty
+    public Card peekFirst();
+
+    //Retrieves, but does not remove, the last element of this deque
+    //returns null if this deque is empty
+    public Card peekLast();
     
 }
