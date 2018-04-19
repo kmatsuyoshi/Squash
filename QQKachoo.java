@@ -43,7 +43,7 @@ public class QQKachoo<Card> implements Deque<Card> {
 	    frontNode.setNext( tempNode );
             _front = frontNode;
         }
-        _size += 1;
+        _size++;
     }
 
     /* Inserts the specified element at the end of this deque if it is 
@@ -61,7 +61,7 @@ public class QQKachoo<Card> implements Deque<Card> {
             tempNode.setNext( endNode );
             _end = endNode;
         }
-        _size += 1;
+        _size++;
     }
     
     // *** Peekers ***
@@ -78,6 +78,7 @@ public class QQKachoo<Card> implements Deque<Card> {
 	    return null;
 	DLLNode<Card> tempNode = _front;
 	_front = _front.getNext();
+	_size--;
 	return tempNode.getValue();
     }
     public Card pollLast(){
@@ -85,6 +86,7 @@ public class QQKachoo<Card> implements Deque<Card> {
 	    return null;
 	DLLNode<Card> tempNode = _end;
 	_end =_end.getPrev();
+	_size--;
 	return tempNode.getValue();
     }
     
