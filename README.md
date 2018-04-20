@@ -4,7 +4,7 @@ Roster: Kendrick Liang, Kayli Matsuyoshi, Lynne Wang
 ### TO DO LIST:
 - [x] Draft a list of prioritized deque methods to implement
 - [x] Write a local Deque interface
-- [ ] Design an implementation (QQKachoo) of the Deque interface w/ chosen methods
+- [x] Design an implementation (QQKachoo) of the Deque interface w/ chosen methods
     - Chosen methods:
         - boolean isEmpty();
         - void addFirst( Card );
@@ -14,8 +14,8 @@ Roster: Kendrick Liang, Kayli Matsuyoshi, Lynne Wang
         - Card peekFirst();
         - Card peekLast();
     - Decide on an architecture for our doubly-linked queue (as of now, LinkedList)
-- [ ] Create a driver class to test functionality of QQKachoo
-- [ ] Modify README as decisions are made and improved
+- [x] Create a driver class to test functionality of QQKachoo
+- [x] Modify README as decisions are made and improved
 
 ### PLAN:
 1. Draft a list of prioritized deque methods to implement.
