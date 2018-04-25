@@ -5,7 +5,7 @@
   2018-04-18
 */
 
-public class QQKchDriver {
+public class DequeTester {
     public static void main(String[] args) {
 	QQKachoo<String> mister = new QQKachoo<String>();
 
