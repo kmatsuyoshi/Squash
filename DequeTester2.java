@@ -31,12 +31,12 @@ public class DequeTester2 {
 
 	//Testing peek
 	System.out.println("PeekFirst: icecream");
-	System.out.println(peekFirst());
+	System.out.println(ayo.peekFirst());
 	System.out.println("PeekLast: tower");
-	System.out.println(peekLast());
+	System.out.println(ayo.peekLast());
 
 	//Testing poll
-	System.out.println(pollLast());
-	System.out.println(pollFirst());
+	System.out.println(ayo.pollLast());
+	System.out.println(ayo.pollFirst());
     }
 }

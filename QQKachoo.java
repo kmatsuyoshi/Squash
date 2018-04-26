@@ -81,11 +81,12 @@ public class QQKachoo<Card> implements Deque<Card> {
 	_size--;
 	return tempNode.getValue();
     }
+    
     public Card pollLast(){
 	if (isEmpty())
 	    return null;
 	DLLNode<Card> tempNode = _end;
-	_end =_end.getPrev();
+        _end =_end.getPrev();
 	_size--;
 	return tempNode.getValue();
     }
